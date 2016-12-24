@@ -1,0 +1,15 @@
+.tooltip{
+    position: fixed;
+    opacity:0;
+    fill-opacity:0;
+    background: #eccc48;
+    padding: 10px;
+    transform: translate(10px, -110%);
+    color: black;
+    font-family: Avenir;
+    font-size:10px;
+}
+
+.show{
+    opacity:0.8;
+}

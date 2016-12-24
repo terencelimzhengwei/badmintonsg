@@ -1,0 +1,10 @@
+.navbar{
+    background:rgb(40, 39, 39);
+    color:white;
+    font-size:26px;
+    font-weight:500;
+    height:38px;
+    line-height:38px;
+    padding: 21px 24px 12px;
+    font-family: "Futura";
+}

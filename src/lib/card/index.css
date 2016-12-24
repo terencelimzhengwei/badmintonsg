@@ -1,0 +1,21 @@
+.card{
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 4px 0px;
+    border-radius: 3px;
+    margin: 12px;
+    padding: 24px;
+    position: relative;
+    font-family: "Futura";
+}
+
+.card .title {
+    margin-top:0px;
+    font-size:20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
