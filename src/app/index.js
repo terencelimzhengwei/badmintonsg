@@ -38,7 +38,6 @@ class App extends Component {
 
   render() {
     const data = this.state.data? this.state.data.filter(d=>d.booking_date===this.state.booking_date) : []
-    console.log(data);
     const time_slots = ["7a","8a","9a","10a","11a","12p","1p","2p","3p","4p","5p","6p","7p","8p","9p"]
     const venues = data.length>0?data.map(d=>d.venue):[]
     const parseTime = d3.timeParse("%Y%m%d%H%M");

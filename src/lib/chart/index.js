@@ -7,7 +7,7 @@ import "./index.css";
 
 const ChartSVG = ({children,width,height}) => (
   <div style={{width:"100%"}}>
-    <svg preserveAspectRatios={"xMidYMid meet"} viewBox={"0 0 "+(width*1.7)+" "+(height+30)}>
+    <svg preserveAspectRatio={"xMidYMid meet"} viewBox={"0 0 "+(width*1.7)+" "+(height+30)}>
       {children}
     </svg>
   </div>
