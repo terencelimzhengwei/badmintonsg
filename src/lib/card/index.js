@@ -8,8 +8,8 @@ import React, {PropTypes} from "react";
 
 import "./index.css";
 
-const Card = ({children,title}) => (
-  <div className="card">
+const Card = ({children,title,width}) => (
+  <div className="card" style={{width:width}}>
     <div style={{display: title ? 'auto' : 'none'}} className="header">
       <div className="title">{title}</div>
     </div>

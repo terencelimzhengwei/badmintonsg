@@ -5,7 +5,8 @@
     margin: 12px;
     padding: 24px;
     position: relative;
-    font-family: "Futura";
+    font-family: Futura,Verdana;
+    overflow: hidden;
 }
 
 .card .title {
@@ -17,5 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    overflow: hidden;
+    flex-direction:column;
 }
