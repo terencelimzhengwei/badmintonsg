@@ -70,6 +70,7 @@ class App extends Component {
               options={options}
               text={"Select a Date"}
               onChange={onChange}
+              value={this.state.booking_date}
             />
             <ChartSVG
               width={20*time_slots.length}

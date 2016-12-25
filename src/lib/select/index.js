@@ -4,13 +4,15 @@
 import React, {PropTypes} from "react";
 
 import "./index.css";
-const Select = ({options,text,onChange}) => {
+const Select = ({options,text,onChange,value}) => {
   return (
     <div className="select-container">
       <div className="label">{text}</div>
       <select id="date-select"
               className="date-select"
-              onChange={onChange}>
+              onChange={onChange}
+              value={value}
+      >
         {options.map((d,i)=>(
           <option
             className="date-option"
@@ -33,7 +35,8 @@ Select.defaultProps = {
 Select.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
   text:PropTypes.string,
-  onChange:PropTypes.func
+  onChange:PropTypes.func,
+  value:PropTypes.string
 };
 
 Select.displayName = "Select";
