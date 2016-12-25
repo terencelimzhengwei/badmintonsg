@@ -9,9 +9,15 @@ import "../../fonts/font.css"
 const Navbar = ({title,links}) => {
 
   return (
-    <div className="navbar">
-      {title}
-    </div>
+    <a
+      href="https://www.linkedin.com/in/terencelimzw"
+      style={{textDecoration:"none"}}
+      target="_blank"
+    >
+      <div className="navbar">
+        {title}
+      </div>
+    </a>
   );
 };
 
