@@ -4,5 +4,24 @@
 
 .label{
     font-weight:600;
+    font-size:12px;
     padding:5px 0px 5px 0px;
+    color: #357ca8;
+}
+
+.date-select{
+    font-family:Poppins,sans-serif;
+    font-weight:600;
+    font-size:20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    background: none;
+    border-width:0px 0px 2px 0px;
+    border-color: #494949;
+    max-width: 300px;
+    cursor: pointer;
 }
