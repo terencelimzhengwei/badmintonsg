@@ -10,6 +10,7 @@ import {json} from 'd3-request'
 import * as d3 from 'd3'
 
 import './index.css';
+import '../fonts/font.css'
 
 class App extends Component {
   constructor(props) {
@@ -61,7 +62,7 @@ class App extends Component {
 
     return (
       <div>
-        <Navbar title="ActiveSG Badminton Court Bookings"/>
+        <Navbar title="@terencelimzhengwei"/>
         <div className="flex-container">
           <Card title="Badminton Court Availability" width={"60%"}>
             <div className="update-timestamp">{"Last updated at " + update_timestamp}</div>
