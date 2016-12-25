@@ -4,6 +4,8 @@
 import React, {PropTypes} from "react";
 
 import "./index.css";
+import "../../fonts/font.css"
+
 const Navbar = ({title,links}) => {
 
   return (
