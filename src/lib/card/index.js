@@ -9,7 +9,7 @@ import React, {PropTypes} from "react";
 import "./index.css";
 
 const Card = ({children,title,width}) => (
-  <div className="card" style={{width:width}}>
+  <div className="card" style={{minWidth:width}}>
     <div style={{display: title ? 'auto' : 'none'}} className="header">
       <div className="title">{title}</div>
     </div>
@@ -21,7 +21,8 @@ const Card = ({children,title,width}) => (
 )
 
 Card.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  width: PropTypes.string
 }
 
 export default Card

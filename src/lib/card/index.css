@@ -9,9 +9,10 @@
     overflow: hidden;
 }
 
-.card .title {
+.title {
     margin-top:0px;
-    font-size:20px;
+    font-size: 20px;
+    font-size: 2.5vmax;
 }
 
 .content {
