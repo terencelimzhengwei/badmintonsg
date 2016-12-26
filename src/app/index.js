@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Navbar from '../lib/nav';
 import Card from '../lib/card';
 import HeatMap from '../lib/heatmap'
 import Axis from '../lib/axes'
@@ -61,8 +60,7 @@ class App extends Component {
 
 
     return (
-      <div>
-        <Navbar title="@terencelimzhengwei"/>
+      <div className="app">
         <div className="flex-container">
           <Card title="Badminton Court Availability" width={"50%"}>
             <div className="update-timestamp">{"Last updated at " + update_timestamp}</div>
