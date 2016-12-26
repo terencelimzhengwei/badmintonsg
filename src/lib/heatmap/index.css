@@ -1,6 +1,9 @@
 rect:hover {
     fill:#eccc48;
     fill-opacity:0.8;
-    transition:0.1s;
     cursor:pointer;
+}
+
+rect{
+    transition:1s;
 }
