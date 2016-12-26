@@ -24,3 +24,14 @@
     max-width: 300px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 425px) {
+    /* For mobile phones: */
+    .label {
+        font-size: 8px;
+    }
+
+    .date-select{
+        font-size: 14px;
+    }
+}

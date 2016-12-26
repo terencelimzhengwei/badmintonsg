@@ -17,3 +17,10 @@ body {
     color:#1e5062;
     font-size:12px;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .update-timestamp {
+        font-size: 9px;
+    }
+}

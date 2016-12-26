@@ -30,3 +30,10 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .title {
+        font-size: 16px;
+    }
+}
