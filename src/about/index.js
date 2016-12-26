@@ -32,7 +32,7 @@ export default class About extends Component {
             This web application was built by
             <a
               href="https://www.linkedin.com/in/terencelimzw"
-              style={{textDecoration:"none"}}
+              style={{textDecoration:"none",color:'#1e5062'}}
             ><b> @terencelim </b>
             </a>
             as a way for him to learn more about using React for web development as well as D3 for data visualization.
@@ -41,7 +41,7 @@ export default class About extends Component {
             Terence is currently a Data Science Consultant at
             <a
             href="https://www.linkedin.com/company/dataspark"
-            style={{textDecoration:"none"}}
+            style={{textDecoration:"none",color:'#1e5062'}}
             ><b> DataSpark</b>
             </a>.
           </p>
