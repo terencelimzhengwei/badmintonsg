@@ -5,3 +5,13 @@
     align-items: center;
     flex-direction: column;
 }
+
+.about a:hover{
+    color:#eccc48;
+}
+
+.about a{
+    text-decoration: none;
+    color: #1e5062;
+    transition:0.5s;
+}

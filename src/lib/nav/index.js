@@ -13,7 +13,6 @@ const Navbar = ({title,links}) => {
       <div className="navbar">
         <a
           href="https://www.linkedin.com/in/terencelimzw"
-          style={{textDecoration:"none",color:"white"}}
           target="_blank"
         >
         {title}
