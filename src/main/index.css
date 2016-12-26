@@ -1,6 +1,7 @@
 .example-enter {
     opacity: 0;
-    transition: opacity .5s ease-in;
+    transition: opacity .3s ease-in;
+    transform: translateZ(0);
 }
 
 .example-enter.example-enter-active {
