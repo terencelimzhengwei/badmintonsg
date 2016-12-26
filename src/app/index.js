@@ -64,7 +64,7 @@ class App extends Component {
       <div>
         <Navbar title="@terencelimzhengwei"/>
         <div className="flex-container">
-          <Card title="Badminton Court Availability" width={"60%"}>
+          <Card title="Badminton Court Availability" width={"50%"}>
             <div className="update-timestamp">{"Last updated at " + update_timestamp}</div>
             <Select
               options={options}

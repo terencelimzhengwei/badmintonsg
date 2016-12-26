@@ -23,3 +23,10 @@
     overflow: hidden;
     flex-direction:column;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .card {
+        width: 100%;
+    }
+}
