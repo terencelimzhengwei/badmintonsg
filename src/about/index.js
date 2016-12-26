@@ -24,7 +24,7 @@ export default class About extends Component {
           </p>
           <p>
             By looking at the color of the grids, users can easily know
-            how many available courts are there. By clicking on the grids, users are redirected to the booking site.
+            how many available courts there are. By clicking on the grids, users will be redirected to the booking site.
           </p>
         </Card>
         <Card title="Author" width={"50%"}>
@@ -33,6 +33,7 @@ export default class About extends Component {
             <a
               href="https://www.linkedin.com/in/terencelimzw"
               style={{textDecoration:"none",color:'#1e5062'}}
+              target="_blank"
             ><b> @terencelim </b>
             </a>
             as a way for him to learn more about using React for web development as well as D3 for data visualization.
@@ -42,6 +43,7 @@ export default class About extends Component {
             <a
             href="https://www.linkedin.com/company/dataspark"
             style={{textDecoration:"none",color:'#1e5062'}}
+            target="_blank"
             ><b> DataSpark</b>
             </a>.
           </p>
