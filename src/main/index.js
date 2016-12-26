@@ -16,7 +16,7 @@ export default class About extends Component {
     const links = [{name:"About",link:"/about"},{name:"Viz",link:"/"}]
     return (
       <div>
-        <Navbar title="@terencethehunk" links={links}/>
+        <Navbar title="@terencelimzhengwei" links={links}/>
         {this.props.children}
       </div>
     );
