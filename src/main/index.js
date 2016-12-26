@@ -4,6 +4,7 @@
 
 import React, {Component } from 'react';
 import Navbar from '../lib/nav';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './index.css';
 
 export default class About extends Component {
@@ -17,7 +18,16 @@ export default class About extends Component {
     return (
       <div>
         <Navbar title="@terencelimzhengwei" links={links}/>
-        {this.props.children}
+        <ReactCSSTransitionGroup
+          component="div"
+          transitionName="example"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={500}
+        >
+          {React.cloneElement(this.props.children, {
+            key: this.props.location.pathname
+          })}
+        </ReactCSSTransitionGroup>
       </div>
     );
   }
