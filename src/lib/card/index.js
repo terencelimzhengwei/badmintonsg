@@ -10,7 +10,7 @@ import "../../fonts/font.css"
 import "./index.css";
 
 const Card = ({children,title,width}) => (
-  <div className="card" style={{minWidth:width}}>
+  <div className="card" style={{width:width}}>
     <div style={{display: title ? 'auto' : 'none'}} className="header">
       <div className="title">{title}</div>
     </div>

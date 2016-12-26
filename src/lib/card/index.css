@@ -6,6 +6,7 @@
     padding: 24px;
     position: relative;
     overflow: hidden;
+
 }
 
 .title {
@@ -27,13 +28,15 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .card {
-        width: 100%;
+        min-width: 80%;
     }
-}
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
     .title {
         font-size: 16px;
     }
+
+    p{
+        font-size: 12px;
+    }
+
 }
