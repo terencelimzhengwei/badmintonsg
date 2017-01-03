@@ -26,6 +26,9 @@ export default class About extends Component {
             By looking at the color of the grids, users can easily know
             how many available courts there are. By clicking on the grids, users will be redirected to the booking site.
           </p>
+          <p>
+            The data is updated every 30 minutes so as to minimize any impact on ActiveSG/SportsHub servers.
+          </p>
         </Card>
         <Card title="Author" width={"50%"}>
           <p>
