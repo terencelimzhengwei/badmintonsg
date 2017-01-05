@@ -30,7 +30,7 @@ class App extends Component {
         this.setState({
           data: data.filter(d => (d.avail.reduce((a, b) => a + b, 0))),
           date_range: date_array,
-          booking_date: date_array[3]
+          booking_date: date_array[0]
         });
       }
       )
