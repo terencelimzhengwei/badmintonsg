@@ -27,10 +27,16 @@ class App extends Component {
         const date_parser = d3.timeParse("%Y-%m-%d")
         const date_formatter = d3.timeFormat("%Y-%m-%d")
         const date_array = d3.timeDays(date_parser(date_range[0]),date_parser(date_range[1])).map(d=>date_formatter(d))
+        const available_slots = data.filter(d => (d.avail.reduce((a, b) => a + b, 0)))
+        const booking_date = available_slots.filter(d=>d.booking_date===date_array[0]).length > 0 ? date_array[0] : date_array[1]
+        const parseTime = d3.timeParse("%Y%m%d%H%M");
+        const formatTime = d3.timeFormat("%Y-%m-%d %H:%M");
+        const update_timestamp = formatTime(parseTime(available_slots[0].update_timestamp))
         this.setState({
-          data: data.filter(d => (d.avail.reduce((a, b) => a + b, 0))),
+          data: available_slots,
           date_range: date_array,
-          booking_date: date_array[0]
+          booking_date: booking_date,
+          update_timestamp: update_timestamp
         });
       }
       )
@@ -40,9 +46,6 @@ class App extends Component {
     const data = this.state.data? this.state.data.filter(d=>d.booking_date===this.state.booking_date) : []
     const time_slots = ["7a","8a","9a","10a","11a","12p","1p","2p","3p","4p","5p","6p","7p","8p","9p"]
     const venues = data.length>0?data.map(d=>d.venue):[]
-    const parseTime = d3.timeParse("%Y%m%d%H%M");
-    const formatTime = d3.timeFormat("%Y-%m-%d %H:%M");
-    const update_timestamp = data.length>0?formatTime(parseTime(data[0].update_timestamp)):"";
     const options = this.state.date_range?this.state.date_range:[]
     const onMouseOver = (e) =>{
       const x = e.clientX
@@ -63,7 +66,7 @@ class App extends Component {
       <div className="app">
         <div className="flex-container">
           <Card title="Badminton Court Availability" width={"50%"}>
-            <div className="update-timestamp">{"Last updated at " + update_timestamp}</div>
+            <div className="update-timestamp">{"Last updated at " + this.state.update_timestamp}</div>
             <Select
               options={options}
               text={"Select a Date"}
