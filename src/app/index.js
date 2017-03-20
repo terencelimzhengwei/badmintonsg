@@ -18,28 +18,40 @@ class App extends Component {
   }
 
   componentWillMount() {
-    json("https://raw.githubusercontent.com/terencelimzhengwei/active-sg-badminton/master/data/latest.json",
+    const setData = (data) => {
+      const date_range = d3.extent(data,(d)=>d.booking_date)
+      const date_parser = d3.timeParse("%Y-%m-%d")
+      const date_formatter = d3.timeFormat("%Y-%m-%d")
+      const date_array = d3.timeDays(date_parser(date_range[0]),date_parser(date_range[1])).map(d=>date_formatter(d))
+      const available_slots = data.filter(d => (d.avail.reduce((a, b) => a + b, 0)))
+      const booking_date = available_slots.filter(d=>d.booking_date===date_array[0]).length > 0 ? date_array[0] : date_array[1]
+      const parseTime = d3.timeParse("%Y%m%d%H%M");
+      const formatTime = d3.timeFormat("%Y-%m-%d %H:%M");
+      const update_timestamp = formatTime(parseTime(available_slots[0].update_timestamp))
+      this.setState({
+        data: available_slots,
+        date_range: date_array,
+        booking_date: booking_date,
+        update_timestamp: update_timestamp
+      });
+    };
+    json("http://222.164.236.19:9003/latest.json",
       (error,data)=>{
         if (error) {
-          this.setState({loadError: true});
+          console.log(error);
+          json("https://raw.githubusercontent.com/terencelimzhengwei/active-sg-badminton/master/data/latest.json",
+            (error,data)=>{
+              if (error) {
+                this.setState({loadError: true});
+              }
+              setData(data);
+            }
+          )
+        } else {
+          setData(data);
         }
-        const date_range = d3.extent(data,(d)=>d.booking_date)
-        const date_parser = d3.timeParse("%Y-%m-%d")
-        const date_formatter = d3.timeFormat("%Y-%m-%d")
-        const date_array = d3.timeDays(date_parser(date_range[0]),date_parser(date_range[1])).map(d=>date_formatter(d))
-        const available_slots = data.filter(d => (d.avail.reduce((a, b) => a + b, 0)))
-        const booking_date = available_slots.filter(d=>d.booking_date===date_array[0]).length > 0 ? date_array[0] : date_array[1]
-        const parseTime = d3.timeParse("%Y%m%d%H%M");
-        const formatTime = d3.timeFormat("%Y-%m-%d %H:%M");
-        const update_timestamp = formatTime(parseTime(available_slots[0].update_timestamp))
-        this.setState({
-          data: available_slots,
-          date_range: date_array,
-          booking_date: booking_date,
-          update_timestamp: update_timestamp
-        });
       }
-      )
+      );
   }
 
   render() {
