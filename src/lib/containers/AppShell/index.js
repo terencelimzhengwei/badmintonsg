@@ -1,16 +1,9 @@
-/**
- * Created by terencelimzw on 26/12/16.
- */
-
-import React, {Component } from 'react';
-import Navbar from '../lib/nav';
+import React, {Component} from 'react';
+import Navbar from '../../components/Navbar';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './index.css';
 
-export default class About extends Component {
-  // static propTypes = {}
-  // static defaultProps = {}
-  // state = {}
+export default class AppShell extends Component {
 
   render() {
     // const { className, ...props } = this.props;

@@ -1,12 +1,6 @@
-/**
- * Created by terencelimzw on 24/12/16.
- */
-/**
- * Created by terencelimzw on 24/12/16.
- */
 import React, {PropTypes} from "react";
 
-import "./index.css";
+import "./index.css"
 
 const Tooltip = ({show,x,y,message}) => {
   const classes = show ? "tooltip show" : "tooltip";

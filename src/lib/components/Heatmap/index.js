@@ -10,7 +10,7 @@ const HeatMap = ({gridSize,stroke,strokeOpacity,colorRange,data,onMouseOver,onMo
   var domain = [0,(raw_data?d3.max(raw_data.map(d=>d3.max(d))):0)]
   var colorScale = d3.scaleLinear().range(colorRange).domain(domain)
   return (
-      <g className={"heatmap"}>
+      <g className={"Heatmap"}>
         {data.map((d, i) => {
             return (
               d.avail.map((a, b) => (

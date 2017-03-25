@@ -5,7 +5,6 @@ import React, {PropTypes} from "react";
 import {Link} from "react-router";
 
 import "./index.css";
-import "../../fonts/font.css"
 
 const Navbar = ({title,links}) => {
 

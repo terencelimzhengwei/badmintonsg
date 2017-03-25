@@ -6,7 +6,6 @@
  */
 import React, {PropTypes} from "react";
 
-import "../../fonts/font.css"
 import "./index.css";
 
 const Card = ({children,title,width}) => (

@@ -3,7 +3,7 @@
  */
 
 import React, {Component } from 'react';
-import Card from '../lib/card'
+import Card from '../Card'
 
 import './index.css';
 

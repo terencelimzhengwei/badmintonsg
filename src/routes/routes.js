@@ -5,10 +5,10 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
 
-import App from './app';
-import About from './about';
-import Main from './main';
-import NotFound from './notfound';
+import App from '../lib/containers/Module'
+import About from '../lib/components/AboutPage';
+import Main from '../lib/containers/AppShell';
+import NotFound from '../lib/components/NotFoundPage';
 
 const Routes = (props) => (
   <Router {...props}>

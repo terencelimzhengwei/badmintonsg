@@ -2,15 +2,12 @@
  * Created by terencelimzw on 26/12/16.
  */
 
-import React, {Component } from 'react';
-import Card from '../lib/card'
+import React, {PureComponent } from 'react';
+import Card from '../Card';
 
 import './index.css';
 
-export default class About extends Component {
-  // static propTypes = {}
-  // static defaultProps = {}
-  // state = {}
+export default class About extends PureComponent {
 
   render() {
     // const { className, ...props } = this.props;

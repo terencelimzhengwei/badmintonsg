@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import Card from '../lib/card';
-import HeatMap from '../lib/heatmap'
-import Axis from '../lib/axes'
-import ChartSVG from '../lib/chart'
-import Tooltip from '../lib/tooltip'
-import Select from '../lib/select'
+import Card from '../../components/Card';
+import HeatMap from '../../components/Heatmap';
+import Axis from '../../components/HeatmapAxes';
+import ChartSVG from '../../components/ChartSVG';
+import Tooltip from '../../components/Tooltip';
+import Select from '../../components/Select';
 import {json} from 'd3-request'
 import * as d3 from 'd3'
 
 import './index.css';
-import '../fonts/font.css'
 
-class App extends Component {
+class Module extends Component {
   constructor(props) {
     super(props);
     this.state = {hover:false,x:0,y:0,value:0};
@@ -35,10 +34,10 @@ class App extends Component {
         update_timestamp: update_timestamp
       });
     };
-    json("http://222.164.236.19:9003/latest.json",
-      (error,data)=>{
-        if (error) {
-          console.log(error);
+    // json("http://222.164.236.19:9003/latest.json",
+    //   (error,data)=>{
+    //     if (error) {
+    //       console.log(error);
           json("https://raw.githubusercontent.com/terencelimzhengwei/active-sg-badminton/master/data/latest.json",
             (error,data)=>{
               if (error) {
@@ -47,11 +46,11 @@ class App extends Component {
               setData(data);
             }
           )
-        } else {
-          setData(data);
-        }
-      }
-      );
+      //   } else {
+      //     setData(data);
+      //   }
+      // }
+      // );
   }
 
   render() {
@@ -125,4 +124,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Module;
