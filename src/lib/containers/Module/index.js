@@ -34,10 +34,10 @@ class Module extends Component {
         update_timestamp: update_timestamp
       });
     };
-    // json("http://222.164.236.19:9003/latest.json",
-    //   (error,data)=>{
-    //     if (error) {
-    //       console.log(error);
+    json("https://api.mlab.com/api/1/databases/badmintonsg/collections/results?apiKey=eR__JjsZukw9X2OcaR-KqVhL3gxfwF9u",
+      (error,data)=>{
+        if (error || data.length===0) {
+          console.log(error);
           json("https://raw.githubusercontent.com/terencelimzhengwei/active-sg-badminton/master/data/latest.json",
             (error,data)=>{
               if (error) {
@@ -46,11 +46,11 @@ class Module extends Component {
               setData(data);
             }
           )
-      //   } else {
-      //     setData(data);
-      //   }
-      // }
-      // );
+        } else {
+          setData(data[0].results);
+        }
+      }
+      );
   }
 
   render() {
@@ -58,6 +58,7 @@ class Module extends Component {
     const time_slots = ["7a","8a","9a","10a","11a","12p","1p","2p","3p","4p","5p","6p","7p","8p","9p"]
     const venues = data.length>0?data.map(d=>d.venue):[]
     const options = this.state.date_range?this.state.date_range:[]
+    const updateTimestampMessage = this.state.update_timestamp ? `Last updated at ${this.state.update_timestamp}` : 'Requesting data...'
     const onMouseOver = (e) =>{
       const x = e.clientX
       const y = e.clientY
@@ -77,7 +78,7 @@ class Module extends Component {
       <div className="app">
         <div className="flex-container">
           <Card title="Badminton Court Availability" width={"50%"}>
-            <div className="update-timestamp">{"Last updated at " + this.state.update_timestamp}</div>
+            <div className="update-timestamp">{updateTimestampMessage}</div>
             <Select
               options={options}
               text={"Select a Date"}
